@@ -4,6 +4,8 @@ class CreateUsers < ActiveRecord::Migration[5.0]
       t.string :name
       t.string :email
       t.boolean :newsletter
+
+      t.timestamps
     end
   end
 end
