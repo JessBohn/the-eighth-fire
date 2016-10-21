@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 20161021192422) do
     t.string   "name"
     t.string   "email"
     t.string   "password_digest"
-    t.boolean  "newsletter"
+    t.boolean  "newsletter",      default: true
     t.string   "remember_digest"
     t.string   "reset_digest"
     t.datetime "reset_sent_at"
