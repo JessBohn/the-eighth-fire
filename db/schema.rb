@@ -15,10 +15,14 @@ ActiveRecord::Schema.define(version: 20161021192422) do
   create_table "users", force: :cascade do |t|
     t.string   "name"
     t.string   "email"
-    t.boolean  "newsletter"
-    t.datetime "created_at",                 null: false
-    t.datetime "updated_at",                 null: false
-    t.boolean  "admin",      default: false
+    t.string   "password_digest"
+    t.boolean  "newsletter",      default: true
+    t.string   "remember_digest"
+    t.string   "reset_digest"
+    t.datetime "reset_sent_at"
+    t.datetime "created_at",                      null: false
+    t.datetime "updated_at",                      null: false
+    t.boolean  "admin",           default: false
   end
 
 end

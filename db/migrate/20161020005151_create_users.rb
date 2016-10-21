@@ -3,7 +3,11 @@ class CreateUsers < ActiveRecord::Migration[5.0]
     create_table :users do |t|
       t.string :name
       t.string :email
-      t.boolean :newsletter
+      t.string :password_digest
+      t.boolean :newsletter, default: true
+      t.string :remember_digest
+      t.string :reset_digest
+      t.datetime :reset_sent_at
 
       t.timestamps
     end
